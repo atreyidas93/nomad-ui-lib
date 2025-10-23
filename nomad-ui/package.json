@@ -1,0 +1,73 @@
+{
+  "name": "nomad-ui",
+  "version": "1.0.0",
+  "description": "Framework-agnostic web component library",
+  "main": "dist/nomad-ui.js",
+  "module": "dist/nomad-ui.esm.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/nomad-ui.esm.js",
+      "require": "./dist/nomad-ui.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./dist/*": "./dist/*"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "web-components",
+    "custom-elements",
+    "ui-library",
+    "framework-agnostic",
+    "react",
+    "vue",
+    "angular",
+    "vanilla-js",
+    "typescript",
+    "css",
+    "storybook",
+    "custom-elements"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run build:js && npm run build:types",
+    "build:js": "vite build",
+    "build:types": "tsc --emitDeclarationOnly --outDir dist/types && node scripts/generate-types.js",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "clean": "rimraf dist",
+    "dev": "vite",
+    "preview": "vite preview",
+    "build:demo": "npm run build && node scripts/build-for-demo.js"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^7.6.7",
+    "@storybook/addon-actions": "^7.6.20",
+    "@storybook/addon-backgrounds": "^7.6.7",
+    "@storybook/addon-controls": "^7.6.7",
+    "@storybook/addon-docs": "^7.6.7",
+    "@storybook/addon-essentials": "^7.6.7",
+    "@storybook/addon-links": "^7.6.7",
+    "@storybook/addon-viewport": "^7.6.7",
+    "@storybook/blocks": "^7.6.7",
+    "@storybook/web-components": "^7.6.20",
+    "@storybook/web-components-vite": "^7.6.20",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-storybook": "^0.6.15",
+    "prettier": "^3.0.0",
+    "rimraf": "^5.0.10",
+    "storybook": "^7.6.7",
+    "terser": "^5.0.0",
+    "typescript": "^5.9.2",
+    "vite": "^4.5.14",
+    "vite-plugin-dts": "^4.5.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

@@ -1,0 +1,44 @@
+export declare class NomadDropdown extends HTMLElement {
+    onDropdownChange: ((data: {
+        value: string;
+        oldValue: string;
+        options: string[];
+    }) => void) | null;
+    onDropdownOpen: (() => void) | null;
+    onDropdownClose: (() => void) | null;
+    private isOpen;
+    private options;
+    private _internalValue;
+    private _rendering;
+    constructor();
+    static get observedAttributes(): string[];
+    connectedCallback(): void;
+    get label(): string;
+    get value(): string;
+    get placeholder(): string;
+    get disabled(): boolean;
+    get size(): string;
+    get variant(): string;
+    set value(val: string);
+    attributeChangedCallback(name: string, oldValue: string, newValue: string): void;
+    parseOptions(): void;
+    updateSelectedDisplay(): void;
+    updateDropdownList(): void;
+    updateDisabledState(): void;
+    render(): void;
+    attachEvents(): void;
+    attachOptionEvents(): void;
+    handleButtonClick: (e: Event) => void;
+    handleKeyDown: (e: Event) => void;
+    handleOptionClick: (e: Event) => void;
+    handleOutsideClick: () => void;
+    toggle(): void;
+    open(): void;
+    close(): void;
+    selectOption(value: string): void;
+    focusFirstOption(): void;
+    focus(): void;
+    blur(): void;
+    setOptions(options: string[]): void;
+    disconnectedCallback(): void;
+}
