@@ -142,7 +142,7 @@ npm run test:ui
 
 ## 📄 License
 
-P Internal - see the [LICENSE](LICENSE) file for details.
+Private Repo - see the [LICENSE](LICENSE) file for details.
 
 ## 🔗 Links
 
